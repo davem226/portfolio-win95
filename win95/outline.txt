@@ -1,0 +1,77 @@
+OBJECTS
+    Folder
+        components
+            icon
+            name
+        location
+        contents
+            Folders
+            Files
+        highlighted
+        opened/closed
+    File
+        components
+            icon
+            name
+            extension
+                if any
+        location
+        highlighted
+        opened/closed
+        anchor
+    Window
+        components
+            title bar
+                icon
+                name
+                title buttons
+                    min
+                    expand
+                    close
+            nav bar
+            display
+                Folders
+                Files
+            footer
+        highlighted
+        opened/closed
+
+    Taskbar Item
+        name
+        highlighted
+
+STRUCTURE
+    Desktop
+        Folders
+            Folders
+                etc.
+            Files
+        Files
+
+OPERATIONS
+    Render file
+    Double-click
+        highlight on single-click
+    Open Window
+        render contents
+    Close Window
+    Render in Taskbar
+    
+APPLICATION
+    Create all Objects based on "STRUCTURE" and "OBJECTS"?
+    On load
+        Render Desktop
+        Generate click handlers
+            all Folders
+            all Files
+            Window buttons
+        On double-click
+            render in taskbar
+            if Folder
+                open Window
+                    ender contents
+            if File
+                open anchored link in new tab
+        On X click
+            close Window
+    

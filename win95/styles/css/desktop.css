@@ -1,0 +1,71 @@
+/* Color Palette */
+/* ——————————————————————————————— */
+/* teal: #008080
+dark blue: #000080
+dark gray: #6c6c6c or #7a7a7a
+light gray: #bebebe */
+/* ——————————————————————————————— */
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#desktop {
+    position: absolute;
+    height: 94%;
+    width: 100%;
+    background-color: #008080;
+
+    color: #ededed;
+
+}
+
+#taskbar {
+    height: 6%;
+    width: 100%;
+    background-color: #bebebe;
+    position: absolute;
+    bottom: 0px;
+}
+
+#start-btn, #time {
+    position: absolute;
+    bottom: 0px;
+    width: 10%;
+    height: 80%;
+
+    margin: 0.5%;
+    /* border-top: 
+    border-left:  */
+
+    font-size: 25px;
+    
+    background-color: #bebebe;
+}
+#start-btn {
+    left: 0px;
+}
+#time {
+    right: 0px;
+}
+
+#start-icon {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    height: 80%;
+    width: 40%;
+}
+#start-text {
+    position: absolute;
+    right: 0px;
+    bottom: 15%;
+    height: 70%;
+    width: 60%;
+
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+}

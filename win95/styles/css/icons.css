@@ -1,0 +1,28 @@
+.icon {
+    position: absolute;
+    left: 0px;
+    height: 15%; 
+    width: 8%; 
+
+    margin-left: 0.5%;
+}
+
+.icon-img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.icon-title {
+    position: absolute;
+    left: 3%;
+    bottom: -5%;
+    width: 100%;
+
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+}

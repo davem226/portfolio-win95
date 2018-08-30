@@ -1,14 +1,27 @@
+------------------
+ Logic of the app 
+------------------
+render desktop DOM
+double-click on file
+get DOMlink of that element
+use that attribute to find the corresponding file object
+if directory 
+    pass its components object to windowToDOM()
+    store this window as a variable
+    loop through contents.files
+        find file object with same components.name
+        pass its components object and DOMlink to fileToDOM()
+        store this file as a variable
+        append file to window
+else
+    open contents.anchor on double-click
+
+functions that affect the DOM
+    e.g. show selected border on single-click,
+        open and populate window on dbl-click
+Repeat for files in newly opened window
+
 OBJECTS
-    Folder
-        components
-            icon
-            name
-        location
-        contents
-            Folders
-            Files
-        highlighted
-        opened/closed
     File
         components
             icon
@@ -36,10 +49,6 @@ OBJECTS
         highlighted
         opened/closed
 
-    Taskbar Item
-        name
-        highlighted
-
 STRUCTURE
     Desktop
         Folders
@@ -48,7 +57,7 @@ STRUCTURE
             Files
         Files
 
-OPERATIONS
+FUNCTIONS
     Render file
     Double-click
         highlight on single-click

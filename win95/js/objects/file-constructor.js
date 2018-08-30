@@ -1,8 +1,11 @@
+var images = "styles/icons/";
+
 function File(obj) {
+    this.DOMlink = obj.DOMlink;
     this.location = obj.location;
     this.components = {
         name: obj.name,
-        icon: obj.icon,
+        icon: images + obj.icon,
     };
     this.isDir = obj.isDir;
 
@@ -17,10 +20,10 @@ function File(obj) {
             anchor: obj.anchor
         };
     }
-    this.highlighted = obj.highlighted;
+    // this.isSelected = false;
 
-    this.render() = function () {
-        var file = fileToDOM(this.components);
-        $(this.location).append(file);
-    }
+    // this.render() = function () {
+    //     var file = fileToDOM(this.components);
+    //     $(this.location).append(file);
+    // }
 }

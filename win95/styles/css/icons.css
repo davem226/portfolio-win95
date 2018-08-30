@@ -1,4 +1,4 @@
-.icon {
+.file {
     position: absolute;
     left: 0px;
     height: 15%; 
@@ -7,7 +7,7 @@
     margin-left: 0.5%;
 }
 
-.icon-img {
+.file-icon {
     position: absolute;
     left: 0%;
     top: 0%;
@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-.icon-title {
+.file-name {
     position: absolute;
     left: 3%;
     bottom: -5%;

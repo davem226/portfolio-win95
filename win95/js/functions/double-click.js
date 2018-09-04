@@ -1,11 +1,8 @@
-// Adds double-click functionality to all files
-$(function () {
-    var isSelected = "";
-    $(".file").click(function () {
+var isSelected = "";
+function addDoubleClick(id, onDesktop) {
+    $(id).click(function () {
         // Double-click
         if (isSelected === $(this).find("div").html()) {
-            alert("You've double-clicked!!!")
-
             var domlink = $(this).attr("DOMlink");
             var clickedFile = findObject(domlink);
 
@@ -13,16 +10,19 @@ $(function () {
             if (clickedFile.isDir === true) {
                 var numFiles = clickedFile.contents.files.length;
                 var window = windowToDOM(clickedFile.components, numFiles);
+                // Add close click handler HERE
 
                 for (i in clickedFile.contents.files) {
                     var fileName = clickedFile.contents.files[i];
                     var file = renderFile(fileName);
-                    window.append(file);
+                    var display = window.find(".display");
+                    display.append(file);
+                    addDoubleClick(`#${file[0].id}`, false);
                 }
             }
             // True file
             else {
-                
+
             }
         }
         // Single-click
@@ -30,11 +30,18 @@ $(function () {
             // Erase border of previously selected file
             $(".file").css("border", "none");
 
+            // Set color of border
+            if (onDesktop) {
+                var borderColor = "#e35f5f";
+            } else {
+                var borderColor = "#6c6c6c"
+            }
             $(this).find("div").css({
-                "border": "dotted 2px #e35f5f",
+                "border": "dotted 2px " + borderColor,
             });
+
             isSelected = $(this).find("div").html();
-            
+
             //  Second click must within 0.5 seconds
             setTimeout(function () {
                 isSelected = "";
@@ -52,4 +59,4 @@ $(function () {
             isSelected = "";
         }
     });
-});
+}

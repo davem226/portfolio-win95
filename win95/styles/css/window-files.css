@@ -1,13 +1,14 @@
-.file {
-    position: absolute;
-    left: 0px;
-    height: 15%; 
-    width: 8%; 
+[location="window"].file {
+    position: relative;
+    display: grid;
+
+    height: 70px; 
+    width: 77px;  
 
     margin-left: 0.5%;
 }
 
-.file-icon {
+[location="window"].file-icon {
     position: absolute;
     left: 0%;
     top: 0%;
@@ -15,14 +16,13 @@
     width: 100%;
 }
 
-.file-name {
+[location="window"].file-name {
     position: absolute;
     left: 3%;
     bottom: -5%;
     width: 100%;
 
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
     font-stretch: ultra-condensed;
 }

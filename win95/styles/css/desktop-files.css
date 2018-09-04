@@ -1,0 +1,28 @@
+[location="desktop"].file {
+    position: relative;
+    float: left;
+
+    height: 14%; 
+    width: 8%;  
+
+    margin-left: 0.5%;
+}
+
+[location="desktop"].file-icon {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+[location="desktop"].file-name {
+    position: absolute;
+    left: 3%;
+    bottom: -5%;
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 100;
+    font-stretch: ultra-condensed;
+}

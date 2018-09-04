@@ -46,17 +46,22 @@ function windowToDOM(components, numFiles) {
     return window;
 }
 
-function fileToDOM(components, DOMlink) {
+function fileToDOM(location, components, DOMlink) {
     var file = $("<div>").attr({
+        "location": location,
         "class": "file",
+        "id": DOMlink,
         "DOMlink": DOMlink
     });
     file.append($("<img>").attr({
+        "location": location,
         "src": components.icon,
         "class": "file-icon"
     }));
-    var name = $("<div>").attr("class", "file-name")
-        .text(components.name);
+    var name = $("<div>").attr({
+        "location": location,
+        "class": "file-name"
+    }).text(components.name);
     if (components.ext) {
         name.append(components.ext);
     }

@@ -1,6 +1,6 @@
 .window {
-    width: 33%;
-    height: 33%;
+    width: 40%;
+    height: 65%;
 
     position: absolute;
     left: 15%;
@@ -15,7 +15,8 @@
     width: 100%;
     height: 10%;
 
-    color: #6c6c6c;
+    background-color: #6c6c6c;
+    color: #bebebe;
 }
 
 .titlebar-icon {
@@ -50,6 +51,15 @@
     width: 33%;
     height: 100%;
 }
+#min {
+    left: 0%;
+}
+#max {
+    left: 33%;
+}
+#close {
+    right: 0;
+}
 /* -------------------------------------------------------------- */
 .navbar {
     position: absolute;
@@ -59,7 +69,8 @@
     width: 100%;
     height: 12%;
 
-    color: #bebebe;
+    background-color: #bebebe;
+    color: black;
 }
 /* -------------------------------------------------------------- */
 
@@ -72,7 +83,8 @@
     width: 96%;
     height: 67%;
 
-    color: white;
+    background-color: white;
+    color: black;
 }
 /* -------------------------------------------------------------- */
 
@@ -85,6 +97,7 @@
     width: 100%;
     height: 10%;
 
-    color: #bebebe;
+    background-color: #bebebe;
+    color: black;
 }
 /* -------------------------------------------------------------- */

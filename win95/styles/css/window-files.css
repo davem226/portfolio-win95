@@ -1,27 +1,28 @@
 [location="window"].file {
     position: relative;
-    display: grid;
+    float: left;
 
-    height: 70px; 
-    width: 77px;  
+    height: 100px; 
+    width: 100px;  
 
-    margin-left: 0.5%;
+    margin-left: 1.5%;
 }
 
 [location="window"].file-icon {
     position: absolute;
     left: 0%;
     top: 0%;
-    height: 100%;
-    width: 100%;
+    height: 70%;
+    width: 80%;
 }
 
 [location="window"].file-name {
     position: absolute;
-    left: 3%;
-    bottom: -5%;
+    /* left: 3%; */
+    bottom: 0%;
     width: 100%;
 
+    text-align: center;
     font-size: 18px;
     font-weight: 100;
     font-stretch: ultra-condensed;

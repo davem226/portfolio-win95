@@ -20,7 +20,7 @@ function addDoubleClick(id, onDesktop) {
                     addDoubleClick(`#${file[0].id}`, false);
                 }
             }
-            // True file
+            // File file
             else {
 
             }

@@ -3,19 +3,29 @@ function windowToDOM(components, numFiles) {
 
     // Create title bar
     var titleBar = $("<div>").attr("class", "titlebar");
-    titleBar.append($("<img>").attr({
-        "src": components.icon,
-        "class": "titlebar-icon"
-    }));
+    // titleBar.append($("<img>").attr({
+    //     "src": components.icon,
+    //     "class": "titlebar-icon"
+    // }));
     titleBar.append($("<div>").attr("class", "titlebar-name")
         .text(components.name));
     var buttons = $("<div>").attr("class", "titlebar-buttons");
     for (i in a = ["min", "max", "close"]) {
-        buttons.append($("<img>").attr({
-            "src": images + a[i] + ".png",
+        var btn = $("<button>").attr({
             "class": "titlebar-button",
             "id": a[i]
-        }));
+        });
+
+        var symbol = $("<div>").attr({
+            "class": "titlebar-symbol",
+            "id": `${a[i]}-symbol`
+        });
+        if (i == 2) {
+            symbol.text("X");
+        }
+
+        btn.append(symbol);
+        buttons.append(btn);
     }
     titleBar.append(buttons);
     window.append(titleBar);

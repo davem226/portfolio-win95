@@ -9,26 +9,35 @@ function addDoubleClick(id, onDesktop) {
             // Directory file
             if (clickedFile.isDir === true) {
                 var numFiles = clickedFile.contents.files.length;
-                var window = windowToDOM(clickedFile.components, numFiles);
-                // Add close click handler HERE
+                var win = windowToDOM(clickedFile.components, numFiles);
+                addCloseability();
 
                 for (i in clickedFile.contents.files) {
                     var fileName = clickedFile.contents.files[i];
                     var file = renderFile(fileName);
-                    var display = window.find(".display");
+                    var display = win.find(".display");
                     display.append(file);
                     addDoubleClick(`#${file[0].id}`, false);
                 }
             }
-            // File file
+            // Internet file
+            else if (clickedFile.components.icon === images + "internet.png") {
+                window.open(clickedFile.contents.anchor);
+            }
+            // Text file
             else {
-
+                var win = windowToDOM(clickedFile.components);
+                var display = win.find(".display");
+                display.html(clickedFile.contents.text).css({
+                    "font-size": "20px",
+                });
+                addCloseability();
             }
         }
         // Single-click
         else {
             // Erase border of previously selected file
-            $(".file").css("border", "none");
+            $(".file-name").css("border", "none");
 
             // Set color of border
             if (onDesktop) {

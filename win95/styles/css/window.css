@@ -67,27 +67,27 @@
     top: 20%;
     left: 25%;
 }
-#min {
+[type="min"].titlebar-button {
     right: 58%;
 }
-#min-symbol {
+[type="min-symbol"].titlebar-symbol {
     border-bottom: 3px solid black;
 }
-#max {
+[type="max"].titlebar-button {
     right: 30%;
 
 }
-#max-symbol {
+[type="max-symbol"].titlebar-symbol {
     left: 20%;
 
     border: 1.5px solid black;
     border-top: 3px solid black;
 }
-#close {
+[type="close"].titlebar-button {
     right: 0%;
 
 }
-#close-symbol {
+[type="close-symbol"].titlebar-symbol {
     width: 80%;
     height: 80%;
     left: 10%;

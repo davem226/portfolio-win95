@@ -17,13 +17,8 @@ function File(obj) {
     else {
         this.components.ext = obj.ext;
         this.contents = {
-            anchor: obj.anchor
+            anchor: obj.anchor,
+            text: obj.text
         };
     }
-    // this.isSelected = false;
-
-    // this.render() = function () {
-    //     var file = fileToDOM(this.components);
-    //     $(this.location).append(file);
-    // }
 }

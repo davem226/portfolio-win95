@@ -113,5 +113,6 @@ var contact = new File({
     files: null,
     ext: ".txt",
     anchor: null,
+    text: "&nbsp;Email: davem226@yahoo.com <br> &nbsp;Phone: (330) 321-7521"
 });
 Files.push(contact);

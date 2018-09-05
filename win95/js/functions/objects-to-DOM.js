@@ -1,24 +1,20 @@
 function windowToDOM(components, numFiles) {
-    var window = $("<div>").attr("class", "window");
+    var win = $("<div>").attr("class", "window");
 
     // Create title bar
     var titleBar = $("<div>").attr("class", "titlebar");
-    // titleBar.append($("<img>").attr({
-    //     "src": components.icon,
-    //     "class": "titlebar-icon"
-    // }));
     titleBar.append($("<div>").attr("class", "titlebar-name")
         .text(components.name));
     var buttons = $("<div>").attr("class", "titlebar-buttons");
     for (i in a = ["min", "max", "close"]) {
         var btn = $("<button>").attr({
             "class": "titlebar-button",
-            "id": a[i]
+            "type": a[i]
         });
 
         var symbol = $("<div>").attr({
             "class": "titlebar-symbol",
-            "id": `${a[i]}-symbol`
+            "type": `${a[i]}-symbol`
         });
         if (i == 2) {
             symbol.text("X");
@@ -28,32 +24,34 @@ function windowToDOM(components, numFiles) {
         buttons.append(btn);
     }
     titleBar.append(buttons);
-    window.append(titleBar);
+    win.append(titleBar);
 
     // Create navbar
     var navBar = $("<div>").attr("class", "navbar");
     for (i in a = ["File", " Edit", " View", " Help"]) {
         navBar.append(a[i]);
     }
-    window.append(navBar);
+    win.append(navBar);
 
     // Create display area; files added later
     var display = $("<div>").attr("class", "display");
-    window.append(display);
+    win.append(display);
 
     // Create footer
-    var footer = $("<div>").attr("class", "footer")
-        .text(numFiles + " object(s)");
-    window.append(footer);
+    if (numFiles) {
+        var footer = $("<div>").attr("class", "footer")
+            .text(numFiles + " object(s)");
+        win.append(footer);
+    }
 
     // Show in desktop and taskbar
-    $("#desktop").append(window);
+    $("#desktop").append(win);
     $("#tb-app-area").append(
         $("<div>").attr("class", "tb-app")
             .text(components.name)
     );
-    
-    return window;
+
+    return win;
 }
 
 function fileToDOM(location, components, DOMlink) {
